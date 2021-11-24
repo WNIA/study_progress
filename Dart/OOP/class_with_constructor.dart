@@ -8,23 +8,26 @@
 void main() {
   //create 'ross' object
   Person ross = Person('Ross', 'Geller');
-  print("Full Name: ${ross.getFullName() }");
+  print("Full Name: ${ross.getFullName()}");
   print("Age: ${ross.age}");
 }
 
 //Person class with constructor
 class Person {
-    //instance variables with 'null' value
-    String firstName, lastName;
+  //instance variables with 'null' value
+  String firstName, lastName;
 
-    //instance value with 'null' value
-    int age;
+  //instance value with 'null' value
+  int age;
 
-    //constructor function
-    Person(this.firstName, this.lastName, [this.age = 55]);//both {} & [] can be used
+  //constructor function
+  Person(this.firstName, this.lastName,
+      [this.age = 55]); //both {} & [] can be used
 
-    //instance method
-    String getFullName() {
-      return this.firstName + " " + this.lastName; //'this' points to the object itself
-    }
+  //instance method
+  String getFullName() {
+    return this.firstName +
+        " " +
+        this.lastName; //'this' points to the object itself
+  }
 }

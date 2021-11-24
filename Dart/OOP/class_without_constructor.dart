@@ -31,14 +31,16 @@ void main() {
 class Person {
   // A static variables are accessed on the class
   static String company = 'AWESOME LLC.';
-   // instance variables with `null` value
+  // instance variables with `null` value
   late String firstName, lastName;
   // instance variable with initial `18` value
   var age = 18;
 
   //instance methods
   String getFullName() {
-    return this.firstName +" "+this.lastName; //this points to the object itself;
+    return this.firstName +
+        " " +
+        this.lastName; //this points to the object itself;
   }
 
   //static method
@@ -50,8 +52,7 @@ class Person {
   // it overrides `toString` method defined in `Object` class
   @override
   String toString() {
-    
     // since `company` is a static variable, it should be accessed on `Person` class
-    return "Name: ${ this.getFullName() }, Age: ${ this.age }, Company: ${ Person.company }, Info: ${ Person.info() }";
+    return "Name: ${this.getFullName()}, Age: ${this.age}, Company: ${Person.company}, Info: ${Person.info()}";
   }
 }
