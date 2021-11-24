@@ -20,6 +20,7 @@ void main() {
   Person ross = Person();
   ross.firstName = 'Ross';
   ross.lastName = 'Gallilio';
+  // ross.age = 7; //age can be changed
 
   print("Full name: ${ross.getFullName()}");
   print("ross object: $ross");
