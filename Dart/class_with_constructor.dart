@@ -21,12 +21,7 @@ class Person {
     int age;
 
     //constructor function
-    // Person(String firstName, String lastName, [int age = 55]) {
-    //     this.firstName;
-    //     this.lastName;
-    //     this.age;
-    // }
-    Person(this.firstName, this.lastName, {this.age = 55});
+    Person(this.firstName, this.lastName, [this.age = 55]);//both {} & [] can be used
 
     //instance method
     String getFullName() {
