@@ -13,22 +13,23 @@ void main() {
 }
 
 //Person class with constructor
-    class Person {
-        //instance variables with 'null' value
-        String firstName, lastName;
+class Person {
+    //instance variables with 'null' value
+    String firstName, lastName;
 
-        //instance value with 'null' value
-        int age;
+    //instance value with 'null' value
+    int age;
 
-        //constructor function
-        Person(String firstName, String lastName, [int age = 55]) {
-            this.firstName;
-            this.lastName;
-            this.age;
-        }
+    //constructor function
+    // Person(String firstName, String lastName, [int age = 55]) {
+    //     this.firstName;
+    //     this.lastName;
+    //     this.age;
+    // }
+    Person(this.firstName, this.lastName, {this.age = 55});
 
-        //instance method
-        String getFullName() {
-          return this.firstName + " " + this.lastName; //'this' points to the object itself
-        }
+    //instance method
+    String getFullName() {
+      return this.firstName + " " + this.lastName; //'this' points to the object itself
     }
+}
