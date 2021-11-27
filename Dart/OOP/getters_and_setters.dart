@@ -1,4 +1,3 @@
-
 /**
  * A getter function is called when it is accessed like an instance variable on the object.
  * A setter function is called when a value is assigned to object with the same variable name.
@@ -15,34 +14,33 @@
  * -> void set funcName => statement;
  */
 void main() {
-
-  var ross = Person( "Ross", "Geller Jr." );
-  print( ross.fullName );
+  var ross = Person("Ross", "Geller Jr.");
+  print(ross.fullName);
 
   // change name
   ross.fullName = "Chandler M. Bing";
-  print( ross.fullName );
+  print(ross.fullName);
   ross.fullName = "Moss Steller Jr.";
-  print( ross.fullName );
+  print(ross.fullName);
 }
 
 class Person {
-  
-   // _ (underscore) prefix makes variables private to the library
+  // _ (underscore) prefix makes variables private to the library
   String _firstName, _lastName;
-  
+
   // default constructor
-  Person(this._firstName, this._lastName);
+  Person(this._firstName,
+      this._lastName); //can't use only one of the variables. both must be initialized with defaukt constructor.
 
   // getter function for `fullName` property
   String get fullName {
-    return "${ this._firstName } ${ this._lastName }";
+    return "${this._firstName} ${this._lastName}";
   }
 
   // setter function for `fullName` property
-  void set fullName( String name ) {
+  void set fullName(String name) {
     var nameParts = name.split(" "); // split name by a space
-    this._firstName = nameParts[ 0 ];
-    this._lastName = nameParts[ 1 ];
+    this._firstName = nameParts[0];
+    this._lastName = nameParts[1];
   }
 }
