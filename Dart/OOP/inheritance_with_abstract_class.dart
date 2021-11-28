@@ -1,4 +1,3 @@
-import 'class_without_constructor.dart';
 
 /**
  * When both `sub-class` and `super-class` has a method with common name,
